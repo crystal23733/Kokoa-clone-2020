@@ -22,7 +22,6 @@
 }
 
 .user-component__subtitle {
-  margin-top: 7px;
   opacity: 0.4;
 }
 
@@ -51,4 +50,24 @@
 .user-components__time {
   display: block;
   margin-bottom: 10px;
+}
+
+.user-component__number{
+  margin-top: 7px;
+  display: flex;
+}
+
+.user-component__number-circle{
+  margin-left: 9px;
+  border: 1px solid red;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  position: relative;
+  top: -1px;
+}
+.user-component__number-circle span{
+  display: flex;
+  justify-content: center;
+  color: red;
 }
