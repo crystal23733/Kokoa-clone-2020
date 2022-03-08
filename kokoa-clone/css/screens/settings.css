@@ -1,3 +1,6 @@
+.main-screen{
+    height: 100vh;
+}
 .settings__setting{
     padding: 20px 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
@@ -18,4 +21,31 @@
 
 .settings__setting-column:last-child {
     opacity: 0.5;
-  }
+}
+
+.settings__setting:last-child{
+    border-bottom: none;
+}
+
+.settings-list:first-child{
+    padding-bottom: 23px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+}
+
+.settings-list:last-child{
+    margin-top: 23px;
+}
+
+
+.settings-list:last-child > .settings__setting:nth-child(3) span:last-child{
+    font-size: 15px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    text-align: center;
+    position: relative;
+    bottom: 3px;
+}
