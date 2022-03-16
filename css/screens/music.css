@@ -20,6 +20,15 @@
 
 .music-header__column:nth-child(2){
     justify-content: center;
+    font-weight: bold;
+}
+
+.music-header__column-header{
+    display: flex;
+    align-items: center;
+    padding: 6px 8px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
 }
 
 .music-header__column:last-child{
@@ -29,4 +38,17 @@
 
 .music-header__column:last-child span:first-child{
     margin-right: 15px;
+}
+
+.music-header__column-header i{
+    margin-right: 6px;
+    color: #03D344;
+}
+
+.main__music-screen{
+    display: flex;
+}
+
+.main__music-screen__menu-column{
+    display: flex;
 }
