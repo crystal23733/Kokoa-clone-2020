@@ -1,0 +1,32 @@
+#music-screen{
+    background-color: #1A1A1A;
+    color: white;
+}
+
+.music-header{
+    display: flex;
+    margin-top: 13px;
+}
+
+.music-header__column{
+    display: flex;
+    width: 33%;
+    align-items: center;
+}
+
+.music-header__column:first-child{
+    margin-left: 15px;
+}
+
+.music-header__column:nth-child(2){
+    justify-content: center;
+}
+
+.music-header__column:last-child{
+    justify-content: flex-end;
+    margin-right: 15px;
+}
+
+.music-header__column:last-child span:first-child{
+    margin-right: 15px;
+}

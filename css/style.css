@@ -16,7 +16,7 @@
 @import "screens/more.css";
 @import "screens/settings.css";
 @import "screens/chat.css";
-@import "screens/mp3.css";
+@import "screens/music.css";
 
 .main-screen {
   padding: 0px var(--horizontal-space);
