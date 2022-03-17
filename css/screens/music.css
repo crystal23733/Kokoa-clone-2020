@@ -27,7 +27,7 @@
     display: flex;
     align-items: center;
     padding: 6px 8px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: var(--opacity-border);
     border-radius: 10px;
 }
 
@@ -47,8 +47,24 @@
 
 .main__music-screen{
     display: flex;
+    justify-content: space-around;
+    margin-top: 22px;
 }
 
 .main__music-screen__menu-column{
     display: flex;
+    width: 50%;
+}
+
+.main__music-screen__menu-column:last-child{
+    justify-content: flex-end;
+}
+
+.music-screen__menu-column__menu{
+    font-size: 22px;
+    padding: 20px;
+}
+
+.main__music-screen__menu-column:last-child .music-screen__menu-column__menu:last-child span{
+    border: var(--opacity-border);
 }
