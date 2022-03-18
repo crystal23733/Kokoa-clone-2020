@@ -1,6 +1,8 @@
 #music-screen{
     background-color: #1A1A1A;
     color: white;
+    height: 100vh;
+    box-sizing: border-box;
 }
 
 .music-header{
@@ -85,7 +87,8 @@
 }
 
 .ul-music-list{
-    height: 400px;
+    height: 100%;
+    box-sizing: border-box;
 }
 
 .music-list{
@@ -123,4 +126,9 @@
 
 .music-list__emoticons i:first-child{
     margin-right: 20px;
+}
+
+.music-controller__img img{
+    width: 30px;
+    height: 30px;
 }
