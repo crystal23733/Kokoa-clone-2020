@@ -47,6 +47,7 @@
 
 .main__music-screen{
     margin-top: 22px;
+    height: 500px;
 }
 
 .main-menu{
@@ -83,8 +84,8 @@
     padding: 8px 11px;
 }
 
-ul{
-    height: 480px;
+.ul-music-list{
+    height: 400px;
 }
 
 .music-list{
