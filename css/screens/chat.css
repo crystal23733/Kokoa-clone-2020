@@ -192,7 +192,7 @@
     opacity: 1;
 }
 
-.reply:focus-within .reply__column:first-child,
+/* .reply:focus-within .reply__column:first-child,
 .reply:focus-within .fa-grin,
 .reply:focus-within button{
     transition: opacity 0.3s ease-in-out;
@@ -204,7 +204,7 @@
     opacity: 0;
 }
 
-/* .reply input:focus{
+.reply input:focus{
     width: 97vw;
     transform: translateX(-11%) translateY(-80px) ;
 }
