@@ -77,7 +77,7 @@
     animation: messageRowLeft 0.8s linear;
 }
 
-.message-row:last-child{
+.my-chat{
     animation: messageRowRight 0.8s linear;
 }
 
