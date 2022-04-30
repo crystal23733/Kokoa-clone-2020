@@ -202,7 +202,7 @@
 .reply:focus-within .fa-grin,
 .reply:focus-within button{
     opacity: 0;
-}
+} */
 
 .reply input:focus{
     width: 97vw;
