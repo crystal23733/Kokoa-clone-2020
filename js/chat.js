@@ -5,8 +5,8 @@ const chatTimeStamp = document.querySelector(".chat__timestamp");
 function timeStampGetClock(){
     const stampDate = new Date();
     const stampYears = stampDate.getFullYear();
-    const stampMonth = stampDate.getMonth();
-    const stampDays = stampDate.getDay();
+    const stampMonth = stampDate.getMonth() + 1;
+    const stampDays = stampDate.getDate();
     chatTimeStamp.textContent = `${stampYears}년 ${stampMonth}월 ${stampDays}일`;
 }
 
