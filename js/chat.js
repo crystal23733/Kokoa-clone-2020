@@ -1,13 +1,11 @@
 const mainChatScreen = document.querySelector(".main-chat");
 
-const chatTimeStamp = document.querySelector(".chat__timestamp");
-
-function timeStampGetClock(){
+function timeStampGetClock(timeStampDiv){
     const stampDate = new Date();
     const stampYears = stampDate.getFullYear();
     const stampMonth = stampDate.getMonth() + 1;
     const stampDays = stampDate.getDate();
-    chatTimeStamp.textContent = `${stampYears}년 ${stampMonth}월 ${stampDays}일`;
+    timeStampDiv.textContent = `${stampYears}년 ${stampMonth}월 ${stampDays}일`;
 }
 
 
@@ -26,7 +24,6 @@ function saveNewReplys(){
 
 function replyEnter(event){
     event.preventDefault();
-    timeStampGetClock();
     const newReply = replyInput.value;
     replyInput.value = "";
     myChatBubble(newReply);
@@ -34,6 +31,10 @@ function replyEnter(event){
 }
 
 function myChatBubble(newReply){
+    const timeStampDiv = document.createElement("div");
+    mainChatScreen.appendChild(timeStampDiv);
+    timeStampDiv.classList.add("chat__timestamp");
+    timeStampGetClock(timeStampDiv);
     const messageRowOwnDiv = document.createElement("div");
     mainChatScreen.appendChild(messageRowOwnDiv);
     messageRowOwnDiv.classList.add("my-chat", "message-row", "message-row--own");
