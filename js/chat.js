@@ -8,15 +8,19 @@ function timeStampGetClock(timeStampDiv){
     timeStampDiv.textContent = `${stampYears}년 ${stampMonth}월 ${stampDays}일`;
 }
 
-
-
 const messageRow = document.querySelector(".message-row");
 const replyForm = document.querySelector(".reply");
 const replyInput = document.querySelector(".reply input");
 
 let newReplys =[];
+let timeStamps = [];
 
 const NEWREPLYS_KEY = "newReplys";
+const TIMESTAMP_KEY = "TimeStamp";
+
+function saveTimeStamp(){
+    localStorage.setItem(TIMESTAMP_KEY, JSON.stringify(timeStamps));
+}
 
 function saveNewReplys(){
     localStorage.setItem(NEWREPLYS_KEY, JSON.stringify(newReplys));
@@ -24,17 +28,23 @@ function saveNewReplys(){
 
 function replyEnter(event){
     event.preventDefault();
+    handleTimeStamp();
     const newReply = replyInput.value;
     replyInput.value = "";
     myChatBubble(newReply);
+    saveTimeStamp();
     saveNewReplys();
 }
 
-function myChatBubble(newReply){
+function handleTimeStamp(){
     const timeStampDiv = document.createElement("div");
     mainChatScreen.appendChild(timeStampDiv);
     timeStampDiv.classList.add("chat__timestamp");
     timeStampGetClock(timeStampDiv);
+    timeStamps.push(timeStampDiv.textContent);
+}
+
+function myChatBubble(newReply){
     const messageRowOwnDiv = document.createElement("div");
     mainChatScreen.appendChild(messageRowOwnDiv);
     messageRowOwnDiv.classList.add("my-chat", "message-row", "message-row--own");
@@ -62,9 +72,15 @@ function getChatClock(messageTime){
     messageTime.textContent = `${hours}:${minutes}`;
 }
 
+const savedTimeStamp = localStorage.getItem(TIMESTAMP_KEY);
 const savedNewReplys = localStorage.getItem(NEWREPLYS_KEY);
 
 replyForm.addEventListener("submit", replyEnter);
+
+if(savedTimeStamp !== null){
+    const parsedTimeStamp = JSON.parse(savedTimeStamp);
+    parsedTimeStamp.forEach(handleTimeStamp);
+}
 
 if(savedNewReplys !== null){
     const parsedNewReplys = JSON.parse(savedNewReplys);
